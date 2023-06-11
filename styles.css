@@ -1,14 +1,51 @@
-nav {
-  background: #6065ac;
+
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-nav a {
-  color: #ebe5e2;
-  font-size: 2.5rem !important;
+h3.anime-title {
+  font-family: 'Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #272532;
+}
+
+.p-3 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1rem;
+  color: #6065ac;
+}
+
+.anime-desc {
+  font-style: italic;
+}
+
+
+#anime-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  padding: 5rem;
+}
+
+.col-anime {
+  padding-right: 10px;
+  padding-left: 10px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .anime-card {
   padding: 10px;
+  background-color: #e9d6f5;
 }
 
 .anime-img {
@@ -20,25 +57,7 @@ nav a {
 }
 
 .container-fluid {
-  background: var(--color6) !important;
-  background: #8000FF;
-}
-
-#anime-content {
-  margin-top: 5rem;
-  padding: 5rem;
-}
-
-.row.anime-row {
-  margin-right: -10px;
-  margin-left: -10px;
-}
-
-.col-anime {
-  padding-right: 10px;
-  padding-left: 10px;
-  flex: 0 0 25%;
-  max-width: 25%;
+  background-color: #f3e8fd !important;
 }
 
 .pagination {
