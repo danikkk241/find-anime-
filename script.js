@@ -1,3 +1,6 @@
+const API_URL = 'https://kitsu.io/api/edge/anime';
+let page = 1;
+
 const mainContent = document.getElementById('anime-content');
 const form = document.getElementById('search-form');
 const search = document.getElementById('search');
