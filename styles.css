@@ -1,8 +1,6 @@
-
-
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1.5;
   background-color: #6b5b8e;
 }
@@ -78,4 +76,31 @@ h3.anime-title {
   pointer-events: none;
   background-color: #fff;
   border-color: #dee2e6;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  flex: 1 0 auto;
+  margin: 10px;
+}
+
+/* Media queries for responsive layout */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%; /* Cards will occupy full width on smaller screens */
+    height: auto; /* Height will adjust based on content */
+    margin: 10px 0; /* Remove horizontal margin and add vertical margin */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    justify-content: center; /* Center-align cards on smaller screens */
+  }
 }
