@@ -1,106 +1,113 @@
+:root {
+  --color1: #708ed2;
+  --color2: #272532;
+  --color3: #ebe5e2;
+  --color4: #83cfdf;
+  --color5: #13688c;
+  --color6: #373b69;
+}
+
+html,
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 25px;
-  line-height: 1.5;
-  background-color: #6b5b8e;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-h3.anime-title {
-  font-family: 'Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #272532;
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color6) !important;
 }
 
-.p-3 {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 1rem;
-  color: #6065ac;
+nav {
+  background: #6065ac;
 }
 
-.anime-desc {
-  font-style: italic;
+nav a {
+  color: #ebe5e2;
+  font-size: 2.5rem !important;
 }
 
-#anime-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  padding: 5rem;
-  background-color: #836faa;
-}
-
-.col-anime {
-  padding-right: 10px;
-  padding-left: 10px;
-  flex: 0 0 25%;
-  max-width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .anime-card {
   padding: 10px;
-  background-color: #e9d6f5;
+}
+
+.anime-description {
+  background: var(--color5);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.anime-title {
+  color: var(--color3);
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .anime-img {
   border-radius: 0.5rem 0.5rem 0 0;
   overflow: hidden;
   max-height: 100%;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.pagination {
-  margin-top: 2rem;
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
 }
 
-.pagination .page-link {
-  color: #6065ac;
-  background-color: #ebe5e2;
-  border-color: #ebe5e2;
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
 }
 
-.pagination .page-link:hover {
-  color: #fff;
-  background-color: #6065ac;
-  border-color: #6065ac;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.pagination .page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  background-color: #fff;
-  border-color: #dee2e6;
-}
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+#modal-body {
+  margin-top: 20px;
 }
 
-.card {
-  width: 200px;
-  height: 300px;
-  flex: 1 0 auto;
-  margin: 10px;
-}
-
-/* Media queries for responsive layout */
-@media screen and (max-width: 768px) {
-  .card {
-    width: 100%; /* Cards will occupy full width on smaller screens */
-    height: auto; /* Height will adjust based on content */
-    margin: 10px 0; /* Remove horizontal margin and add vertical margin */
+/* Additional styles for responsiveness */
+@media screen and (max-width: 767px) {
+  .anime-card {
+    padding: 5px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .card-container {
-    justify-content: center; /* Center-align cards on smaller screens */
+  .anime-title {
+    font-size: 0.9rem;
+  }
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
   }
 }
